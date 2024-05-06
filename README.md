@@ -16,6 +16,16 @@ The project consists of three parts:
 
 * Part 3 - Position estimation of moving vehicle & one moving obstacle Particle Filter
 
+**How to use:**
+
+* For part 1, just run `question1_plots_video.m` in Matlab
+
+* For part 2, `question2.m`
+
+* For part 3, `question3.m`
+
+(question1.m is used by question2.m & question3.m to first generate the estimations on which part 2 & part 3 rely)
+
 ## Data
 
 **Sampling:** A sampling rate of 10Hz is assumed for both datasets.
@@ -112,12 +122,8 @@ h= @(x) [sqrt((x(4)-x(1))^2 + (x(5) - x(2))^2);
 ### Part 2: Particle Filter
 **Task:** Utilizing the best estimations of the obstacle positions obtained with the Extended Kalman filter (from part 1), use the Particle Filter to estimate the three states of the vehicle from the outset.
 
-**Solution:**
-
 ### Part 3: Particle Filter & moving obstacle
 **Task:** Assume that the second obstacle moves on the x-axis with an unknown stable velocity. Utilizing the best estimation from part 1 as the initial position of the second obstacle, estimate the three states of the vehicle and the position x of the moving obstacle using the Particle Filter. Utilize the provided noisy measurements (dataset 2).
-
-**Solution:**
 
 ## Project Structure
 ```
