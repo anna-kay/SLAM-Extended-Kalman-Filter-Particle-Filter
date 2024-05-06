@@ -36,7 +36,30 @@ control2.csv contains the speed measurements, u and θ
 radar2.csv contains the noisy measurement of the obstacles from the vehicle, d1, φ1, d2, φ2
 
 
-## Question 1
+## Questions
+
+### General Premises
+A vehicle us moving on a plane (2 dimensions).
+
+The vehicle is aware of two static obstacles on the same plane.
+
+The model of the movement of the vehicle is described by:
+
+![kalman_vehicle_movement](https://github.com/anna-kay/extended-kalman-filter-particle-filter-vehicle-movement/assets/56791604/3d139c30-69f6-4ab8-8132-717234f4c7a6)
+
+
+While the model of the measurement of the positions of the obstacles by:
+
+![kalman_obstacles_position](https://github.com/anna-kay/extended-kalman-filter-particle-filter-vehicle-movement/assets/56791604/31d5dadf-925b-4d1e-a5d7-e5cc42453a97)
+
+
+![kalman_X_o_t](https://github.com/anna-kay/extended-kalman-filter-particle-filter-vehicle-movement/assets/56791604/36cbb9aa-7614-49ed-8fb3-22e1db9698c5) and ![kalman_Y_o_t](https://github.com/anna-kay/extended-kalman-filter-particle-filter-vehicle-movement/assets/56791604/1f4efe6d-9cb3-4c37-98ab-b30a40063e5f) are the coordinates of the vehicle at time step t. 
+
+The noise in the system Is Gaussian with mean vlaue 0 and standard deviation σ.
+
+
+### Question 1
+Q1: 
 
 The model of the wolrd is described by:
 
@@ -82,10 +105,11 @@ h= @(x) [sqrt((x(4)-x(1))^2 + (x(5) - x(2))^2);
           ];
 ```
 
-## Question 2
+### Question 2
+Q2: Using the best estimation of the positions of the obstacles achieved with the Extended-Kalman filter (question 1), estimate from the beginning the three states of the vehicle using the Particle Filter.
 
 
-## Question 3
+### Question 3
 
 
 ## Project Structure
