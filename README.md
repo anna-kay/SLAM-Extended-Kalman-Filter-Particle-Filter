@@ -46,6 +46,25 @@ control1.csv & control2.csv contain the speed measurements, u and θ
 
 radar1.csv & radar2.csv contain the noisy measurement of the obstacles from the vehicle, d1, φ1, d2, φ2
 
+## Project Structure
+```
+| - src/
+| - - myLikelihoodMeasurement2Fcn.m
+| - - myLikelihoodMeasurementFcn.m
+| - - myVehicleMovingObstacleStateTransitionFcn.m
+| - - myVehicleStateTransitionFcn.m
+| - - plot_error_covariance_ellipsoid.m
+| - - question1_plots_video.m
+| - - question1.m
+| - - question2.m
+| - - question3.m
+| - datasets/
+| - - control1.csv
+| - - control2.csv
+| - - radar1.csv
+| - - radar2.csv
+```
+
 ## Main Project
 
 ### General Premises
@@ -130,21 +149,47 @@ https://github.com/anna-kay/SLAM-Extended-Kalman-filter-Particle-filter/assets/5
 ### Part 3: Particle Filter & moving obstacle
 **Task:** Assume that the second obstacle moves on the x-axis with an unknown stable velocity. Utilizing the best estimation from part 1 as the initial position of the second obstacle, estimate the three states of the vehicle and the position x of the moving obstacle using the Particle Filter. Utilize the provided noisy measurements (dataset 2).
 
-## Project Structure
-```
-| - src/
-| - - myLikelihoodMeasurement2Fcn.m
-| - - myLikelihoodMeasurementFcn.m
-| - - myVehicleMovingObstacleStateTransitionFcn.m
-| - - myVehicleStateTransitionFcn.m
-| - - plot_error_covariance_ellipsoid.m
-| - - question1_plots_video.m
-| - - question1.m
-| - - question2.m
-| - - question3.m
-| - datasets/
-| - - control1.csv
-| - - control2.csv
-| - - radar1.csv
-| - - radar2.csv
-```
+## Papers & Resources 
+
+**Kalman Filter:**
+
+- [Kalman filter.pdf](https://github.com/anna-kay/SLAM-Extended-Kalman-Filter-Particle-Filter/files/15227552/Kalman.filter.pdf)
+
+- [Understanding the Basis of the Kalman Filter.pdf](https://github.com/anna-kay/SLAM-Extended-Kalman-Filter-Particle-Filter/files/15227595/Understanding.the.Basis.of.the.Kalman.Filter.pdf)
+
+
+**Extended Kalman Filter:**
+
+- [06 EKF Localization - Worked out Example.pdf](https://github.com/anna-kay/SLAM-Extended-Kalman-Filter-Particle-Filter/files/15227556/06.EKF.Localization.-.Worked.out.Example.pdf)
+
+- [extended_kalman_filterPDFNiceImages.pdf](https://github.com/anna-kay/SLAM-Extended-Kalman-Filter-Particle-Filter/files/15227561/extended_kalman_filterPDFNiceImages.pdf)
+
+- [sheet08sol_seems_good.pdf](https://github.com/anna-kay/SLAM-Extended-Kalman-Filter-Particle-Filter/files/15227584/sheet08sol_seems_good.pdf)
+
+- [Simulataneous_localization_and_mapping.pdf](https://github.com/anna-kay/SLAM-Extended-Kalman-Filter-Particle-Filter/files/15227586/Simulataneous_localization_and_mapping.pdf)
+
+- [tutorialEKF_ma8imatika.pdf](https://github.com/anna-kay/SLAM-Extended-Kalman-Filter-Particle-Filter/files/15227593/tutorialEKF_ma8imatika.pdf)
+
+- [theoria.pdf](https://github.com/anna-kay/SLAM-Extended-Kalman-Filter-Particle-Filter/files/15227597/theoria.pdf)
+
+
+**Particle Filter:**
+
+- [77002125.pdf](https://github.com/anna-kay/SLAM-Extended-Kalman-Filter-Particle-Filter/files/15227557/77002125.pdf)
+
+- [lecture-pf.pdf](https://github.com/anna-kay/SLAM-Extended-Kalman-Filter-Particle-Filter/files/15227569/lecture-pf.pdf)
+
+- [Particle Filter.pdf](https://github.com/anna-kay/SLAM-Extended-Kalman-Filter-Particle-Filter/files/15227574/Particle.Filter.pdf)
+
+- [particle-filters++_v2Berckley.pdf](https://github.com/anna-kay/SLAM-Extended-Kalman-Filter-Particle-Filter/files/15227581/particle-filters%2B%2B_v2Berckley.pdf)
+
+
+**SLAM:**
+
+
+- [slamForDummies.pdf](https://github.com/anna-kay/SLAM-Extended-Kalman-Filter-Particle-Filter/files/15227590/slamForDummies.pdf)
+
+- [slam10-fastslam-4.pdf](https://github.com/anna-kay/SLAM-Extended-Kalman-Filter-Particle-Filter/files/15227588/slam10-fastslam-4.pdf)
+
+- [WeightsFreiburg.pdf](https://github.com/anna-kay/SLAM-Extended-Kalman-Filter-Particle-Filter/files/15227596/WeightsFreiburg.pdf)
+
