@@ -1,5 +1,3 @@
-# Extended-Kalman-Filter--Particle-Filter--Vehicle-Movement--SLAM
-
 ## Overview
 
 This project involves the <b>position estimation of vehicle and obstacles</b> using the <b>Extended-Kalman</b> and <b>Particle filters</b>.
