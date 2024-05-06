@@ -1,7 +1,7 @@
-%----------------------Ergasia 3 - Particle Filter-------------------------
+%----------------------Question 3 - Particle Filter-------------------------
 clear;
 clc;
-run('ergasia1.m');
+run('question1.m');
 rng(1234); 
 
 % sampling frequency = 10Hz
@@ -27,8 +27,8 @@ myPF.ResamplingPolicy.MinEffectiveParticleRatio = 0.75;
 myPF.StateEstimationMethod = 'mean';  % (maxweight, mean)
 myPF.ResamplingMethod = 'stratified'; %('multinomial', 'stratified', 'systematic')
 
-control = csvread('control2.csv');
-radar = csvread('radar2.csv');
+control = csvread('datasets/control2.csv');
+radar = csvread('datasets/radar2.csv');
 radar(:,2) = wrapToPi(radar(:,2));
 radar(:,4) = wrapToPi(radar(:,4));
 

@@ -1,4 +1,4 @@
-%---------------Ergasia 1 - Extended Kalman Filter-------------------------
+%---------------Question 1 - Extended Kalman Filter-------------------------
 clear;
 clc;
 
@@ -69,8 +69,8 @@ myEKF.StateCovariance = [0, 0, 0, 0, 0, 0, 0;
 myEKF.ProcessNoise = Q;
 myEKF.MeasurementNoise = R;
 
-control = csvread('control1.csv');
-radar = csvread('radar1.csv');
+control = csvread('datasets/control1.csv');
+radar = csvread('datasets/radar1.csv');
 radar(:,2) = wrapToPi(radar(:,2));
 radar(:,4) = wrapToPi(radar(:,4));
 

@@ -1,4 +1,4 @@
-function plot_fucking_error_covariance_ellipsoid( mu, Sigma )
+function plot_error_covariance_ellipsoid( mu, Sigma )
     NP = 16;
     alpha  = 2*pi/NP*(0:NP);
     circle = [cos(alpha);sin(alpha)];
