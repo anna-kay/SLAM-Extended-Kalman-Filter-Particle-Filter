@@ -44,11 +44,6 @@ control1.csv & control2.csv contain the speed measurements, u and θ
 
 radar1.csv & radar2.csv contain the noisy measurement of the obstacles from the vehicle, d1, φ1, d2, φ2
 
-
-
-
-
-
 ## Main Project
 
 ### General Premises
@@ -119,8 +114,16 @@ h= @(x) [sqrt((x(4)-x(1))^2 + (x(5) - x(2))^2);
           ];
 ```
 
+
+### Extended Kalman Filter: Prediction & Correction Steps
+
+https://github.com/anna-kay/SLAM-Extended-Kalman-filter-Particle-filter/assets/56791604/0645cec2-1be4-4476-bde7-6b9f51ceacc2
+
+
+
 ### Part 2: Particle Filter
 **Task:** Utilizing the best estimations of the obstacle positions obtained with the Extended Kalman filter (from part 1), use the Particle Filter to estimate the three states of the vehicle from the outset.
+
 
 ### Part 3: Particle Filter & moving obstacle
 **Task:** Assume that the second obstacle moves on the x-axis with an unknown stable velocity. Utilizing the best estimation from part 1 as the initial position of the second obstacle, estimate the three states of the vehicle and the position x of the moving obstacle using the Particle Filter. Utilize the provided noisy measurements (dataset 2).
