@@ -130,15 +130,16 @@ https://github.com/anna-kay/SLAM-Extended-Kalman-filter-Particle-filter/assets/5
 
 ## Project Structure
 ```
-| - myLikelihoodMeasurement2Fcn.m
-| - myLikelihoodMeasurementFcn.m
-| - myVehicleMovingObstacleStateTransitionFcn.m
-| - myVehicleStateTransitionFcn.m
-| - plot_error_covariance_ellipsoid.m
-| - question1_plots_video.m
-| - question1.m
-| - question2.m
-| - question3.m
+| - src/
+| - - myLikelihoodMeasurement2Fcn.m
+| - - myLikelihoodMeasurementFcn.m
+| - - myVehicleMovingObstacleStateTransitionFcn.m
+| - - myVehicleStateTransitionFcn.m
+| - - plot_error_covariance_ellipsoid.m
+| - - question1_plots_video.m
+| - - question1.m
+| - - question2.m
+| - - question3.m
 | - datasets/
 | - - control1.csv
 | - - control2.csv
