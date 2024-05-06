@@ -18,21 +18,25 @@ The project is broken down into three parts:
 
 ## Data
 
-Sampling: A sampling rate of 10Hz is assumed for both datasets.
+**Sampling:** A sampling rate of 10Hz is assumed for both datasets.
 
-Noise of measuring device: A mean value of 0 and a standard deviation of 0.3 radians (angle) and 0.5 meters (distance) are assumed.
+**Noise of measuring device:** A mean value of 0 and a standard deviation of 0.3 radians (angle) and 0.5 meters (distance) are assumed.
 
 **Dataset 1:** (used in Part 1 & 2)
-
-control1.csv contains the speed measurements, u and θ
-
-radar1.csv contains the noisy measurement of the obstacles from the vehicle, d1, φ1, d2, φ2
+- control1.csv
+- radar1.csv
 
 **Dataset 2:**  (used in Part 3)
+- control2.csv
+- radar2.csv
 
-control2.csv contains the speed measurements, u and θ
+control1.csv & control2.csv contain the speed measurements, u and θ
 
-radar2.csv contains the noisy measurement of the obstacles from the vehicle, d1, φ1, d2, φ2
+radar1.csv & radar2.csv contain the noisy measurement of the obstacles from the vehicle, d1, φ1, d2, φ2
+
+
+
+
 
 
 ## Main Project
