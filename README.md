@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project involves the <b>position estimation of vehicle and obstacles</b> using the Extended-Kalman and Particle filters.
+This project involves the <b>position estimation of vehicle and obstacles</b> using the <b>Extended-Kalman</b> and <b>Particle filters</b>.
 
 It is implemented in <b>Matlab</b> (R2019a was used) using the:
 * <b>extendedKalmanFilter</b> and 
@@ -11,24 +11,24 @@ of the <b>System Identification Toolbox</b>.
 
 The project is broken down into three parts:
 
-Question 1:
+* Question 1 - Position estimation of moving vehicle & static obstacles using Extended Kalman Filter
 
-Question 2:
+* Question 2 - Position estimation of moving vehicle & static obstacles using Particle Filter
 
-Question 3:
+* Question 3 - Position estimation of moving vehicle & one moving obstacle Particle Filter
 
 ## Data
 
 Sampling: A sampling rate of 10Hz is assumed for both datasets.
 Noise of measuring device: A mean value of 0 and a standard deviation of 0.3 radians (angle) and 0.5 meters (distance) are assumed.
 
-### Dataset 1
+### Dataset 1 (used in Question 1 & Question 2)
 
 control1.csv contains the speed measurements, u and θ
 
 radar1.csv contains the noisy measurement of the obstacles from the vehicle, d1, φ1, d2, φ2
 
-### Dataset 2
+### Dataset 2 (used in Question 3)
 
 control2.csv contains the speed measurements, u and θ
 
