@@ -10,11 +10,11 @@ of the <b>System Identification Toolbox</b>.
 
 The project organized in three parts:
 
-* Part 1 - Position estimation of moving vehicle & static obstacles using Extended Kalman Filter
+1. Position estimation of moving vehicle & static obstacles using Extended Kalman Filter
 
-* Part 2 - Position estimation of moving vehicle & static obstacles using Particle Filter
+2. Position estimation of moving vehicle & static obstacles using Particle Filter
 
-* Part 3 - Position estimation of moving vehicle & one moving obstacle Particle Filter
+3. Position estimation of moving vehicle & one moving obstacle Particle Filter
 
 **How to use:**
 
