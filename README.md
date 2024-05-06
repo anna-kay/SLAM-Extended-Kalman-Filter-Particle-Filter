@@ -8,7 +8,7 @@ It is implemented in <b>Matlab</b> (R2019a) using the:
   
 of the <b>System Identification Toolbox</b>.
 
-The project consists of three parts:
+The project organized in three parts:
 
 * Part 1 - Position estimation of moving vehicle & static obstacles using Extended Kalman Filter
 
