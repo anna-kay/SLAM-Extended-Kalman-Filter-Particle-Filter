@@ -21,6 +21,7 @@ The project is broken down into three parts:
 ## Data
 
 Sampling: A sampling rate of 10Hz is assumed for both datasets.
+
 Noise of measuring device: A mean value of 0 and a standard deviation of 0.3 radians (angle) and 0.5 meters (distance) are assumed.
 
 ### Dataset 1 (used in Question 1 & Question 2)
@@ -39,14 +40,11 @@ radar2.csv contains the noisy measurement of the obstacles from the vehicle, d1,
 ## Questions
 
 ### General Premises
-A vehicle us moving on a plane (2 dimensions).
-
+A vehicle us moving on a plane (2 dimensions). 
 The vehicle is aware of two static obstacles on the same plane.
-
 The model of the movement of the vehicle is described by:
 
 ![kalman_vehicle_movement](https://github.com/anna-kay/extended-kalman-filter-particle-filter-vehicle-movement/assets/56791604/3d139c30-69f6-4ab8-8132-717234f4c7a6)
-
 
 While the model of the measurement of the positions of the obstacles by:
 
@@ -59,7 +57,10 @@ The noise in the system Is Gaussian with mean vlaue 0 and standard deviation σ.
 
 
 ### Question 1
-Q1: 
+
+Q1: Estimate the seven positions using the Extended Kalman filter. Given that: the vehicle is moving with changing velocity and rotation.
+
+Solution:
 
 The model of the wolrd is described by:
 
@@ -77,6 +78,7 @@ f = @(x,u)[ x(1) + u(1)*cos(x(3))*dt;
 x(1), x(2), x(3) describe the position of the vehicle and change according to the model of movement that was provided
 
 x(4), x(5) are the coordinates of the first obstacle, and since it is static, they do not change
+
 x(6), x(7) are the coordinates of the second obstacle, and, similarly to the first one, since it is static, they do not change
 
 The process noise was modeled as follows:
@@ -108,9 +110,12 @@ h= @(x) [sqrt((x(4)-x(1))^2 + (x(5) - x(2))^2);
 ### Question 2
 Q2: Using the best estimation of the positions of the obstacles achieved with the Extended-Kalman filter (question 1), estimate from the beginning the three states of the vehicle using the Particle Filter.
 
+Solution:
 
 ### Question 3
+Q3:
 
+Solution:
 
 ## Project Structure
 ```
