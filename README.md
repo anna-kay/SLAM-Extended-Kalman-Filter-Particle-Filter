@@ -8,13 +8,15 @@ It is implemented in <b>Matlab</b> (R2019a) using the:
   
 of the <b>System Identification Toolbox</b>.
 
+
 The project organized in three parts:
 
-1. Position estimation of moving vehicle & static obstacles using Extended Kalman Filter
+**Part 1:** Position estimation of moving vehicle & static obstacles using **Extended Kalman Filter**
 
-2. Position estimation of moving vehicle & static obstacles using Particle Filter
+**Part 2:** Position estimation of moving vehicle & static obstacles using **Particle Filter**
 
-3. Position estimation of moving vehicle & one moving obstacle Particle Filter
+**Part 3:** Position estimation of moving vehicle & **one moving obstacle Particle Filter**
+
 
 **How to use:**
 
