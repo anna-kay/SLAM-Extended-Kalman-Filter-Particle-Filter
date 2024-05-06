@@ -117,7 +117,7 @@ h= @(x) [sqrt((x(4)-x(1))^2 + (x(5) - x(2))^2);
 ```
 
 
-### Extended Kalman Filter: Prediction & Correction Steps
+**Extended Kalman Filter: Prediction & Correction Steps**
 
 https://github.com/anna-kay/SLAM-Extended-Kalman-filter-Particle-filter/assets/56791604/0645cec2-1be4-4476-bde7-6b9f51ceacc2
 
