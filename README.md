@@ -99,7 +99,7 @@ h= @(x) [sqrt((x(4)-x(1))^2 + (x(5) - x(2))^2);
 | - question1.m
 | - question2.m
 | - question3.m
-| - dataset/
+| - datasets/
 | - - control1.csv
 | - - control2.csv
 | - - radar1.csv
