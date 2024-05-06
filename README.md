@@ -4,9 +4,10 @@
 
 This project involves the <b>position estimation of vehicle and obstacles</b> using the <b>Extended-Kalman</b> and <b>Particle filters</b>.
 
-It is implemented in <b>Matlab</b> (R2019a was used) using the:
-* <b>extendedKalmanFilter</b> and 
-* <b>particleFilter</b> objects 
+It is implemented in <b>Matlab</b> (R2019a) using the:
+* <b>extendedKalmanFilter</b> object and 
+* <b>particleFilter</b> object
+  
 of the <b>System Identification Toolbox</b>.
 
 The project is broken down into three parts:
