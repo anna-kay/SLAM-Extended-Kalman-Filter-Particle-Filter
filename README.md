@@ -149,7 +149,7 @@ https://github.com/anna-kay/SLAM-Extended-Kalman-filter-Particle-filter/assets/5
 ### Part 3: Particle Filter & moving obstacle
 **Task:** Assume that the second obstacle moves on the x-axis with an unknown stable velocity. Utilizing the best estimation from part 1 as the initial position of the second obstacle, estimate the three states of the vehicle and the position x of the moving obstacle using the Particle Filter. Utilize the provided noisy measurements (dataset 2).
 
-## Papers & Resources 
+## Resources 
 
 **Kalman Filter:**
 
