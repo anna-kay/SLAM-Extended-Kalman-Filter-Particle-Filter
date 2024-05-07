@@ -172,6 +172,8 @@ https://github.com/anna-kay/SLAM-Extended-Kalman-filter-Particle-filter/assets/5
 
 - [theoria.pdf](https://github.com/anna-kay/SLAM-Extended-Kalman-Filter-Particle-Filter/files/15227597/theoria.pdf)
 
+- [Uploading mark_wickert_247_NA_DW.pdf…]()
+
 
 **Particle Filter:**
 
@@ -183,13 +185,27 @@ https://github.com/anna-kay/SLAM-Extended-Kalman-filter-Particle-filter/assets/5
 
 - [particle-filters++_v2Berckley.pdf](https://github.com/anna-kay/SLAM-Extended-Kalman-Filter-Particle-Filter/files/15227581/particle-filters%2B%2B_v2Berckley.pdf)
 
+- [Hsaio_plinval_miller_ParticleFiltersPrint.pdf](https://github.com/anna-kay/SLAM-Extended-Kalman-Filter-Particle-Filter/files/15227639/Hsaio_plinval_miller_ParticleFiltersPrint.pdf)
+
+- [LIKELIHOOD.pdf](https://github.com/anna-kay/SLAM-Extended-Kalman-Filter-Particle-Filter/files/15227664/LIKELIHOOD.pdf)
+
 
 **SLAM:**
 
 
 - [slamForDummies.pdf](https://github.com/anna-kay/SLAM-Extended-Kalman-Filter-Particle-Filter/files/15227590/slamForDummies.pdf)
 
+- [2014_0213_EKF SLAM.pptx](https://github.com/anna-kay/SLAM-Extended-Kalman-Filter-Particle-Filter/files/15227633/2014_0213_EKF.SLAM.pptx)
+
+- [Localization3_Slides_Good.pdf](https://github.com/anna-kay/SLAM-Extended-Kalman-Filter-Particle-Filter/files/15227667/Localization3_Slides_Good.pdf)
+
+- [IntroductionToEstimationForNavigation_Newman06_matlabExamplesInTheEnd.pdf](https://github.com/anna-kay/SLAM-Extended-Kalman-Filter-Particle-Filter/files/15227647/IntroductionToEstimationForNavigation_Newman06_matlabExamplesInTheEnd.pdf)
+
+- [Stachniss_slam04-ekf-slam_na_to_dw.pdf](https://github.com/anna-kay/SLAM-Extended-Kalman-Filter-Particle-Filter/files/15227625/Stachniss_slam04-ekf-slam_na_to_dw.pdf)
+
 - [slam10-fastslam-4.pdf](https://github.com/anna-kay/SLAM-Extended-Kalman-Filter-Particle-Filter/files/15227588/slam10-fastslam-4.pdf)
 
 - [WeightsFreiburg.pdf](https://github.com/anna-kay/SLAM-Extended-Kalman-Filter-Particle-Filter/files/15227596/WeightsFreiburg.pdf)
+
+- [2017-simultaneous_localization_and_mapping_a_survey_of_current_trends_in_autonomous_driving (1).pdf](https://github.com/anna-kay/SLAM-Extended-Kalman-Filter-Particle-Filter/files/15227635/2017-simultaneous_localization_and_mapping_a_survey_of_current_trends_in_autonomous_driving.1.pdf)
 
