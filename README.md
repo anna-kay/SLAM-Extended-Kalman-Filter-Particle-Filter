@@ -30,10 +30,6 @@ The project organized in three parts:
 
 ## Data
 
-**Sampling:** A sampling rate of 10Hz is assumed for both datasets.
-
-**Noise of measuring device:** A mean value of 0 and a standard deviation of 0.3 radians (angle) and 0.5 meters (distance) are assumed.
-
 **Dataset 1:** (used in Part 1 & 2)
 - control1.csv
 - radar1.csv
@@ -45,6 +41,10 @@ The project organized in three parts:
 control1.csv & control2.csv contain the speed measurements, u and θ
 
 radar1.csv & radar2.csv contain the noisy measurement of the obstacles from the vehicle, d1, φ1, d2, φ2
+
+**Sampling:** A sampling rate of 10Hz is assumed for both datasets.
+
+**Noise of measuring device:** A mean value of 0 and a standard deviation of 0.3 radians (angle) and 0.5 meters (distance) are assumed.
 
 ## Project Structure
 ```
