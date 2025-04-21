@@ -1,6 +1,6 @@
 ## Overview
 
-This project involves the <b>position estimation of vehicle and obstacles</b> using the <b>Extended-Kalman</b> and <b>Particle filters</b>.
+This project involves the <b>position estimation of vehicle and obstacles</b> using <b>Extended Kalman Filter</b> and <b>Particle Filter</b>.
 
 It is implemented in <b>Matlab</b> (R2019a) using the:
 * <b>extendedKalmanFilter</b> object and 
