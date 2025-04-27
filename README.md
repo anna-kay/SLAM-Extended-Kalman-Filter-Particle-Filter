@@ -78,7 +78,7 @@ while the model of the measurement of the positions of the obstacles by:
 The noise in the system is Gaussian with mean vlaue 0 and standard deviation σ.
 
 
-### Part 1: Extended Kalman Filter
+### Question 1: Extended Kalman Filter
 
 **Task:** Estimate the seven states using the Extended Kalman filter. The vehicle's measurements include the angle and distance from which it perceives each obstacle. The angle is calculated with respect to the longitudinal axis of the vehicle, with rotation considered counter-clockwise. Both angle and distance measurements are noisy, with Gaussian noise having a mean value of 0. The vehicle is subject to changing velocity and rotation.
 
@@ -137,13 +137,19 @@ https://github.com/anna-kay/SLAM-Extended-Kalman-filter-Particle-filter/assets/5
 
 https://github.com/user-attachments/assets/d715cccd-348d-4022-a5b3-10a5930c4e04
 
+**Extended Kalman Filter: Corrected Vehicle Path & its Covariance**
 
-### Part 2: Particle Filter
-**Task:** Utilizing the best estimations of the obstacle positions obtained with the Extended Kalman filter (from part 1), use the Particle Filter to estimate the three states of the vehicle from the outset.
+https://github.com/user-attachments/assets/5520a267-5fc8-4171-be51-fb91498ae100
+
+### Question 2: Particle Filter
+**Task:** Utilizing the best estimations of the obstacle positions obtained with the Extended Kalman filter (from question 1), use the Particle Filter to estimate the three states of the vehicle from the outset.
+
+Best estimations -> final obstacle positions from the EKF. These are considered as fixed landmarks in this question.
 
 
-### Part 3: Particle Filter & moving obstacle
-**Task:** Assume that the second obstacle moves on the x-axis with an unknown stable velocity. Utilizing the best estimation from part 1 as the initial position of the second obstacle, estimate the three states of the vehicle and the position x of the moving obstacle using the Particle Filter. Utilize the provided noisy measurements (dataset 2).
+
+### Question 3: Particle Filter & moving obstacle
+**Task:** Assume that the second obstacle moves on the x-axis with an unknown stable velocity. Utilizing the best estimation from question 1 as the initial position of the second obstacle, estimate the three states of the vehicle and the position x of the moving obstacle using the Particle Filter. Utilize the provided noisy measurements (dataset 2).
 
 ## Resources 
 
