@@ -133,10 +133,14 @@ h= @(x) [sqrt((x(4)-x(1))^2 + (x(5) - x(2))^2);
           ];
 ```
 
-
 **Extended Kalman Filter: Prediction & Correction Steps**
 
 https://github.com/anna-kay/SLAM-Extended-Kalman-filter-Particle-filter/assets/56791604/0645cec2-1be4-4476-bde7-6b9f51ceacc2
+
+**Extended Kalman Filter: Uncertainties of Positions**
+
+https://github.com/user-attachments/assets/d715cccd-348d-4022-a5b3-10a5930c4e04
+
 
 ### Part 2: Particle Filter
 **Task:** Utilizing the best estimations of the obstacle positions obtained with the Extended Kalman filter (from part 1), use the Particle Filter to estimate the three states of the vehicle from the outset.
