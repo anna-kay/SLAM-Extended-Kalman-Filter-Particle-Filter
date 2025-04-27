@@ -9,13 +9,13 @@ It is implemented in <b>Matlab</b> (R2019a) using the:
 of the <b>System Identification Toolbox</b>.
 
 
-The project is organized in three parts:
+The project is organised in three questions:
 
-- **Part 1:** Position estimation of moving vehicle & stationary obstacles using **Extended Kalman Filter**
+- **Question 1:** Position estimation of moving vehicle & stationary obstacles using **Extended Kalman Filter**
 
-- **Part 2:** Position estimation of moving vehicle & stationary obstacles using **Particle Filter**
+- **Question 2:** Position estimation of moving vehicle & stationary obstacles using **Particle Filter**
 
-- **Part 3:** Position estimation of moving vehicle & **one moving obstacle Particle Filter**
+- **Question 3:** Position estimation of moving vehicle & **one moving obstacle Particle Filter**
 
 
 **How to use:**
@@ -139,8 +139,6 @@ h= @(x) [sqrt((x(4)-x(1))^2 + (x(5) - x(2))^2);
 **Extended Kalman Filter: Prediction & Correction Steps**
 
 https://github.com/anna-kay/SLAM-Extended-Kalman-filter-Particle-filter/assets/56791604/0645cec2-1be4-4476-bde7-6b9f51ceacc2
-
-
 
 ### Part 2: Particle Filter
 **Task:** Utilizing the best estimations of the obstacle positions obtained with the Extended Kalman filter (from part 1), use the Particle Filter to estimate the three states of the vehicle from the outset.
