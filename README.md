@@ -20,13 +20,11 @@ The project is organised in three questions:
 
 **How to use:**
 
-* For part 1, just run `question1_plots_video.m` in Matlab
+* For question 1, run `question1_plots_video.m` in Matlab
 
-* For part 2, `question2.m`
+* For questions 2 & 3,  run `question2.m` & `question3.m` respectively.
 
-* For part 3, `question3.m`
-
-(question1.m is used by question2.m & question3.m to first generate the estimations on which part 2 & part 3 rely)
+(question1.m is used by question2.m & question3.m to first generate the estimations on which questions 2 & 3 rely)
 
 ## Data
 
