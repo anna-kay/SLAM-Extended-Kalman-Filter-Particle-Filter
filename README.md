@@ -22,7 +22,7 @@ The project is organised in three questions:
 
 * For question 1, run `question1_plots_video.m` in Matlab
 
-* For questions 2 & 3,  run `question2.m` & `question3.m` respectively.
+* For questions 2 & 3,  run `question2.m` & `question3.m` respectively
 
 (question1.m is used by question2.m & question3.m to first generate the estimations on which questions 2 & 3 rely)
 
