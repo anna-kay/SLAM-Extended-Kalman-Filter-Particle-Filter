@@ -8,7 +8,7 @@ function particles = myVehicleMovingObstacleStateTransitionFcn(particles, dt, u)
        std1 = q;
        std2 = q;
        
-       % Obstacle Xvelocity & process noise
+       % Obstacle X velocity & process noise
        uObstacle = 0.1;
        xAxisDistance = uObstacle*dt;
             

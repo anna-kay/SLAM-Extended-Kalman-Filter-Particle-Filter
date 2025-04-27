@@ -27,9 +27,8 @@ function likelihood = myLikelihoodMeasurementFcn(predictedParticles, measurement
    predictedBearingToA = atan2(distanceToAy,distanceToAx) - predictedParticles(:,3) + std2*randn(length(predictedParticles), 1);
    predictedBearingToB = atan2(distanceToBy,distanceToBx) - predictedParticles(:,3) + std2*randn(length(predictedParticles), 1); 
    
-  %%% *** concatenate the predicted stuff!!!!!!
-  %%% etsi 8a exw measurement me 4 stiles kai predictedMeasurement me 4
-  %%% stiles!!!!
+  % *** concatenate the predicted stuff!
+  % to get 4 columns for measurement & 4 columns for predictedMeasurement
   
   M = repmat(measurement, length(predictedParticles), 1);  % y(k)
   

@@ -1,76 +1,81 @@
-%---------------Ergasia 1 - Extended Kalman Filter-------------------------
+%---------------Question 1 - Extended Kalman Filter-------------------------
 clear;
 clc;
 
-% process noise covariance matrix            
-q = 0.001;
-Q = [q, 0, 0, 0, 0, 0, 0;
-       0, q, 0, 0, 0, 0, 0;
-       0, 0, q, 0, 0, 0, 0;
-       0, 0, 0, 0, 0, 0, 0;
-       0, 0, 0, 0, 0, 0, 0;
-       0, 0, 0, 0, 0, 0, 0;
-       0, 0, 0, 0, 0, 0, 0];
-
-%number of measurements
-m = 4;
-
-% measurement noise covariance matrix
-R = eye(m);               
-R(logical(eye(m))) = [0.25, 0.09, 0.25, 0.09];
-
-% sampling frequency = 10Hz
+% Sampling frequency = 10Hz
 dt = 0.1;
 
-% Orizw ti sunartisi katastasis f kai ti sunartisi metrisis h
-f = @(x,u)[ x(1) + u(1)*cos(x(3))*dt; 
-            x(2) + u(1)*sin(x(3))*dt;
-            x(3) + u(2)*dt;
-            x(4);
-            x(5);
-            x(6);
-            x(7)
+% Process Model - Definition of the state transition function f
+f = @(x,u)[x(1) + u(1)*cos(x(3))*dt; % vehicle position x-axis
+           x(2) + u(1)*sin(x(3))*dt; % vehicle position y-axis
+           x(3) + u(2)*dt; % vehicle orientation
+           x(4); % obstacle A, x-axis (Ax)
+           x(5); % obstacle A, y-axis (Ay)
+           x(6); % obstacle B, x-axis (Bx)
+           x(7)  % obstacle B, y-axis (By)
            ];
 
-h= @(x) [sqrt((x(4)-x(1))^2 + (x(5) - x(2))^2);
-         atan2((x(5) - x(2)),(x(4)-x(1))) - x(3);
+% Measurement Model - Calculates what sensor readings should result from
+% the current state through function h
+h = @(x) [sqrt((x(4)-x(1))^2 + (x(5) - x(2))^2); % range to obstacle A
+         atan2((x(5) - x(2)),(x(4)-x(1))) - x(3); % bearing to obstacle A (relative to vehicle orientation)
              
-         sqrt((x(6)-x(1))^2 + (x(7) - x(2))^2);
-         atan2((x(7) - x(2)),(x(6)-x(1))) - x(3);
-        ];                            
+         sqrt((x(6)-x(1))^2 + (x(7) - x(2))^2); % range to obstacle B
+         atan2((x(7) - x(2)),(x(6)-x(1))) - x(3); % bearing to obstacle B (relative to vehicle orientation)
+        ];                               
 
+% Process Noise Covariance Matrix: Adds small process noise only to 
+% vehicle states, assuming obstacles are perfectly stationary
+q = 0.001;
+Q = [q, 0, 0, 0, 0, 0, 0;
+     0, q, 0, 0, 0, 0, 0;
+     0, 0, q, 0, 0, 0, 0;
+     0, 0, 0, 0, 0, 0, 0;
+     0, 0, 0, 0, 0, 0, 0;
+     0, 0, 0, 0, 0, 0, 0;
+     0, 0, 0, 0, 0, 0, 0];
+
+% Number of measurements (according to measurement model)
+m = 4;
+
+% Measurement Noise Covariance Matrix: Specifies different noise levels for
+% range measurements (0.25) and bearing measurements (0.09)
+R = eye(m);
+r_q = 0.25;
+b_q = 0.09;
+R(logical(eye(m))) = [r_q, b_q, r_q, b_q];
+
+% Initial state definition
+% Random initialisation of the obstacles' positions
 Ax = 1;
 Ay = -1;
 Bx = 1;
 By = 1;
 
-% Initial state definition   
-initialState = [0;
-                0;
-                0;
-                Ax;
-                Ay;
-                Bx;
-                By]; 
+% Vehicle's initial position is set to (0,0,0)
+% Obstacles' inital positions are set to Ax, Ay, Bx, By
+initialState = [0; 0; 0; Ax; Ay; Bx; By]; 
+ 
+% Initilisation of the Extended Kalman Filter 
+x = initialState; 
+myEKF = extendedKalmanFilter(f, h, x); 
 
-% Initilization of the Extended Kalman Filter 
-x=initialState; 
-
-myEKF = extendedKalmanFilter(f,h,x); 
-
+% The State Covariance matrix for the EKF assumes zero initial uncertainty 
+% in vehicle position and significant uncertainty (of covariance 5) in obstacle positions
+u = 5;
 myEKF.StateCovariance = [0, 0, 0, 0, 0, 0, 0;
                          0, 0, 0, 0, 0, 0, 0;
                          0, 0, 0, 0, 0, 0, 0;
-                         0, 0, 0, 5, 0, 0, 0;
-                         0, 0, 0, 0, 5, 0, 0;
-                         0, 0, 0, 0, 0, 5, 0;
-                         0, 0, 0, 0, 0, 0, 5];
+                         0, 0, 0, u, 0, 0, 0;
+                         0, 0, 0, 0, u, 0, 0;
+                         0, 0, 0, 0, 0, u, 0;
+                         0, 0, 0, 0, 0, 0, u];
 
 myEKF.ProcessNoise = Q;
 myEKF.MeasurementNoise = R;
 
-control = csvread('datasets/control1.csv');
-radar = csvread('datasets/radar1.csv');
+control = csvread('../datasets/control1.csv');
+radar = csvread('../datasets/radar1.csv');
 radar(:,2) = wrapToPi(radar(:,2));
 radar(:,4) = wrapToPi(radar(:,4));
 
@@ -80,10 +85,15 @@ CorrectedState = zeros(7,100);
 CorrectedStateCovariance = zeros(7,7,100);
 
 for k=1:length(control)
+    
+    % Prediction step 
     [PredictedState(:,k), PredictedStateCovariance(:,:,k)] = predict(myEKF, control(k,:));
-    [CorrectedState(:,k), CorrectedStateCovariance(:,:,k)] = correct(myEKF, radar(k,:));  
+    PredictedState(3,k) = wrapToPi(PredictedState(3,k));
+    
+    % Correction step
+    [CorrectedState(:,k), CorrectedStateCovariance(:,:,k)] = correct(myEKF, radar(k,:));
+    CorrectedState(3,k) = wrapToPi(CorrectedState(3,k));
 end
-
 
 %%---------------------------PLOTS & VIDEOS------------------------------%%
 %-------------------------------------------------------------------------%
@@ -158,12 +168,7 @@ end
 %     obstacleBcovarinace(:,:,i)) hold on grid on legend('Obstacle B')
 % end
 
-
-%-------------------------------------------------------------------------%
-%-------------------------------------------------------------------------%
 %%------------------------------- VIDEOS---------------------------------%%
-%-------------------------------------------------------------------------%
-%-------------------------------------------------------------------------%
 figure(4)
 for i=1:100
     plot(vehiclePredictedState(1,i), vehiclePredictedState(2,i), 'k.')
@@ -230,7 +235,6 @@ end
 % close the writer object
 close(writerObj);
 
-%-------------------------------------------------------------------------%
 %-------------------------------------------------------------------------%
 %% Video - PLOTTING COVARIANCES OF VEHICLE & OBSCTACLES
 

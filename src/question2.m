@@ -54,7 +54,7 @@ end
 figure(2)
 plot(PredictedStatePF(1,:),PredictedStatePF(2,:), CorrectedStatePF(1,:),CorrectedStatePF(2,:))
 hold on
-plot(A(1),A(2), 'x')
+plot(A(1),A(2), 'bx')
 hold on
 plot(B(1),B(2), 'ro')
 legend('Predicted', 'Corrected', 'Obstacle1', 'Obstacle2')
@@ -62,3 +62,37 @@ grid on
 ax = gca;
 ax.XAxisLocation = 'origin';
 ax.YAxisLocation = 'origin';
+
+%%------------------------------- VIDEOS --------------------------------%%
+figure(3)
+for i=1:100
+    plot(PredictedStatePF(1,i), PredictedStatePF(2,i), 'k.')
+    plot(CorrectedStatePF(1,i), CorrectedStatePF(2,i), 'r.')
+    plot(A(1), A(2), 'bx', B(1), B(2), 'ro')
+    legend('Obstacle1', 'Obstacle2', 'Predicted', 'Corrected')
+    title('Particle Filter prediction&correction steps - Stationary Obstacles')
+    hold on
+    grid on
+    ax = gca;
+    ax.XAxisLocation = 'origin';
+    ax.YAxisLocation = 'origin';
+    F(i) = getframe(gcf);
+    drawnow    
+end
+
+% create the video writer with 1 fps
+writerObj = VideoWriter('particleFilterPredictionCorrection.avi');
+writerObj.FrameRate = 60;
+% set the seconds per image
+% open the video writer
+open(writerObj);
+% write the frames to the video
+for i=1:length(F)
+    % convert the image to a frame
+    frame = F(i) ;    
+    writeVideo(writerObj, frame);
+end
+% close the writer object
+close(writerObj);
+
+%-------------------------------------------------------------------------%

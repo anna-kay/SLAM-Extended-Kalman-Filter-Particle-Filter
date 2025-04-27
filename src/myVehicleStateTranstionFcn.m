@@ -8,7 +8,7 @@ function particles = myVehicleStateTranstionFcn(particles, dt, u)
     std2 = q;
        
     % Calculating next generation particles
-    for i=1:length(particles)  % to length epistrefei ti megaluteri diastasi
+    for i=1:length(particles)  % length returns the bigger dimension 
         noise1 = std1*randn(1, 1);
         noise2 = std2*randn(1, 1);
         particles(i,1) = particles(i,1) + dt*(u(1) + noise1)*cos(particles(i,3));
