@@ -137,7 +137,7 @@ https://github.com/anna-kay/SLAM-Extended-Kalman-filter-Particle-filter/assets/5
 
 https://github.com/user-attachments/assets/d715cccd-348d-4022-a5b3-10a5930c4e04
 
-**EKF - Corrected Vehicle Path and Its Covariance:**
+**EKF - Corrected Vehicle Path and Covariance:**
 
 https://github.com/user-attachments/assets/5520a267-5fc8-4171-be51-fb91498ae100
 
@@ -146,7 +146,7 @@ https://github.com/user-attachments/assets/5520a267-5fc8-4171-be51-fb91498ae100
 
 Best estimations -> final obstacle positions from the EKF. These are considered as fixed landmarks in this question.
 
-**PF - Prediction & Correction Steps: **
+**PF - Prediction & Correction Steps:**
 
 https://github.com/user-attachments/assets/309202ef-60d4-40b5-88db-a5e5dc397c2e
 
