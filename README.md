@@ -129,15 +129,15 @@ h= @(x) [sqrt((x(4)-x(1))^2 + (x(5) - x(2))^2);
           ];
 ```
 
-**Extended Kalman Filter: Prediction & Correction Steps**
+**EKF - Prediction & Correction Steps:**
 
 https://github.com/anna-kay/SLAM-Extended-Kalman-filter-Particle-filter/assets/56791604/0645cec2-1be4-4476-bde7-6b9f51ceacc2
 
-**Extended Kalman Filter: Uncertainties of Positions**
+**EKF - Uncertainties of Positions:**
 
 https://github.com/user-attachments/assets/d715cccd-348d-4022-a5b3-10a5930c4e04
 
-**Extended Kalman Filter: Corrected Vehicle Path and Its Covariance**
+**EKF - Corrected Vehicle Path and Its Covariance:**
 
 https://github.com/user-attachments/assets/5520a267-5fc8-4171-be51-fb91498ae100
 
@@ -146,7 +146,7 @@ https://github.com/user-attachments/assets/5520a267-5fc8-4171-be51-fb91498ae100
 
 Best estimations -> final obstacle positions from the EKF. These are considered as fixed landmarks in this question.
 
-**Particle Filter: Prediction & Correction Steps**
+**PF - Prediction & Correction Steps: **
 
 https://github.com/user-attachments/assets/309202ef-60d4-40b5-88db-a5e5dc397c2e
 
