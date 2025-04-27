@@ -2,11 +2,7 @@
 
 This project involves the <b>position estimation of vehicle and obstacles</b> using <b>Extended Kalman Filter</b> and <b>Particle Filter</b>.
 
-It is implemented in <b>Matlab</b> (R2019a) using the:
-* <b>extendedKalmanFilter</b> object and 
-* <b>particleFilter</b> object
-  
-of the <b>System Identification Toolbox</b>.
+It is implemented in <b>Matlab</b> (R2019a) using the <b>extendedKalmanFilter</b> object and  <b>particleFilter</b> object of the <b>System Identification Toolbox</b>.
 
 
 The project is organised in three questions:
@@ -20,13 +16,11 @@ The project is organised in three questions:
 
 **How to use:**
 
-* For part 1, just run `question1_plots_video.m` in Matlab
+* For question 1, run `question1_plots_video.m` in Matlab
 
-* For part 2, `question2.m`
+* For questions 2 & 3,  run `question2.m` & `question3.m` respectively
 
-* For part 3, `question3.m`
-
-(question1.m is used by question2.m & question3.m to first generate the estimations on which part 2 & part 3 rely)
+(question1.m is used by question2.m & question3.m to first generate the estimations on which questions 2 & 3 rely)
 
 ## Data
 
@@ -69,7 +63,7 @@ radar1.csv & radar2.csv contain the noisy measurement of the obstacles from the 
 
 ### General Premises
 A vehicle us moving on a plane (2 dimensions). 
-The vehicle is aware of two static obstacles on the same plane.
+The vehicle is aware of two stationary obstacles on the same plane.
 The model of the movement of the vehicle is described by:
 
 ![kalman_vehicle_movement](https://github.com/anna-kay/extended-kalman-filter-particle-filter-vehicle-movement/assets/56791604/3d139c30-69f6-4ab8-8132-717234f4c7a6)
@@ -84,7 +78,7 @@ while the model of the measurement of the positions of the obstacles by:
 The noise in the system is Gaussian with mean vlaue 0 and standard deviation σ.
 
 
-### Part 1: Extended Kalman Filter
+### Question 1: Extended Kalman Filter
 
 **Task:** Estimate the seven states using the Extended Kalman filter. The vehicle's measurements include the angle and distance from which it perceives each obstacle. The angle is calculated with respect to the longitudinal axis of the vehicle, with rotation considered counter-clockwise. Both angle and distance measurements are noisy, with Gaussian noise having a mean value of 0. The vehicle is subject to changing velocity and rotation.
 
@@ -105,9 +99,9 @@ f = @(x,u)[ x(1) + u(1)*cos(x(3))*dt;
 
 x(1), x(2), x(3) describe the position of the vehicle and change according to the model of movement that was provided
 
-x(4), x(5) are the coordinates of the first obstacle, and since it is static, they do not change
+x(4), x(5) are the coordinates of the first obstacle, and since it is stationary, they do not change
 
-x(6), x(7) are the coordinates of the second obstacle, and, similarly to the first one, since it is static, they do not change.
+x(6), x(7) are the coordinates of the second obstacle, and, similarly to the first one, since it is stationary, they do not change.
 
 The process noise was modeled as follows:
 
@@ -122,7 +116,7 @@ Q = [q1, 0, 0, 0, 0, 0, 0;
 ```
 
 The three first positions of the diagonal of the matrix describe the noise in the movement of the vehicle.
-The rest of the positions of the diagonal stay empty as they refer to the coordinates of the static obstacles and thus there can be no noise.
+The rest of the positions of the diagonal stay empty as they refer to the coordinates of the stationary obstacles and thus there can be no noise.
 It is assumed that q1=q2=q3 without loss of generality.
 
 The model of the measurement for the obstacles is described by:
@@ -135,17 +129,27 @@ h= @(x) [sqrt((x(4)-x(1))^2 + (x(5) - x(2))^2);
           ];
 ```
 
-
 **Extended Kalman Filter: Prediction & Correction Steps**
 
 https://github.com/anna-kay/SLAM-Extended-Kalman-filter-Particle-filter/assets/56791604/0645cec2-1be4-4476-bde7-6b9f51ceacc2
 
-### Part 2: Particle Filter
-**Task:** Utilizing the best estimations of the obstacle positions obtained with the Extended Kalman filter (from part 1), use the Particle Filter to estimate the three states of the vehicle from the outset.
+**Extended Kalman Filter: Uncertainties of Positions**
+
+https://github.com/user-attachments/assets/d715cccd-348d-4022-a5b3-10a5930c4e04
+
+**Extended Kalman Filter: Corrected Vehicle Path and Its Covariance**
+
+https://github.com/user-attachments/assets/5520a267-5fc8-4171-be51-fb91498ae100
+
+### Question 2: Particle Filter
+**Task:** Utilizing the best estimations of the obstacle positions obtained with the Extended Kalman filter (from question 1), use the Particle Filter to estimate the three states of the vehicle from the outset.
+
+Best estimations -> final obstacle positions from the EKF. These are considered as fixed landmarks in this question.
 
 
-### Part 3: Particle Filter & moving obstacle
-**Task:** Assume that the second obstacle moves on the x-axis with an unknown stable velocity. Utilizing the best estimation from part 1 as the initial position of the second obstacle, estimate the three states of the vehicle and the position x of the moving obstacle using the Particle Filter. Utilize the provided noisy measurements (dataset 2).
+
+### Question 3: Particle Filter & moving obstacle
+**Task:** Assume that the second obstacle moves on the x-axis with an unknown stable velocity. Utilizing the best estimation from question 1 as the initial position of the second obstacle, estimate the three states of the vehicle and the position x of the moving obstacle using the Particle Filter. Utilize the provided noisy measurements (dataset 2).
 
 ## Resources 
 
