@@ -146,6 +146,10 @@ https://github.com/user-attachments/assets/5520a267-5fc8-4171-be51-fb91498ae100
 
 Best estimations -> final obstacle positions from the EKF. These are considered as fixed landmarks in this question.
 
+**Particle Filter: Prediction & Correction Steps**
+
+https://github.com/user-attachments/assets/309202ef-60d4-40b5-88db-a5e5dc397c2e
+
 
 
 ### Question 3: Particle Filter & moving obstacle
