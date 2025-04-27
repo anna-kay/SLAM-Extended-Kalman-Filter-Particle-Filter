@@ -66,8 +66,10 @@ ax.YAxisLocation = 'origin';
 %%------------------------------- VIDEOS --------------------------------%%
 figure(3)
 for i=1:100
+    % vehicle
     plot(PredictedStatePF(1,i), PredictedStatePF(2,i), 'k.')
     plot(CorrectedStatePF(1,i), CorrectedStatePF(2,i), 'r.')
+    % obstacles
     plot(A(1), A(2), 'bx', B(1), B(2), 'ro')
     legend('Obstacle1', 'Obstacle2', 'Predicted', 'Corrected')
     title('Particle Filter prediction&correction steps - Stationary Obstacles')
@@ -82,7 +84,7 @@ end
 
 % create the video writer with 1 fps
 writerObj = VideoWriter('particleFilterPredictionCorrection.avi');
-writerObj.FrameRate = 60;
+writerObj.FrameRate = 120;
 % set the seconds per image
 % open the video writer
 open(writerObj);

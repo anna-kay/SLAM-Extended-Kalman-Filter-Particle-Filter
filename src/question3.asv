@@ -1,7 +1,6 @@
 %----------------------Question 3 - Particle Filter-------------------------
 clear;
 clc;
-
 run('question1.m');
 rng(1234); 
 
@@ -23,15 +22,14 @@ initialize(myPF, numParticles, initalState, initalCov, 'CircularVariables', [0 0
 % Initilization of the Particle Filter
 % myPF.NumParticles = numPartciles;
 % myPF.IsStateVariableCircular = [0 0 1];
-% myPF.State = initalState;
+% myPF.State = ;
 % myPF.StateCovariance = initalCov;
 
 myPF.ResamplingPolicy.MinEffectiveParticleRatio = 0.75;
 
 % Particle Filter Parameters
 myPF.StateEstimationMethod = 'mean';  % (maxweight, mean)
-myPF.ResamplingMethod = 'stratified'; % ('multinomial', 'stratified', 'systematic'), 'systematic' more efficient
-myPF.ResamplingPolicy.MinEffectiveParticleRation = 0.6; % More aggressive samlping
+myPF.ResamplingMethod = 'stratified'; %('multinomial', 'stratified', 'systematic')
 
 % Load  control and measurement data
 control = csvread('../datasets/control2.csv');
