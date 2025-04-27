@@ -30,8 +30,8 @@ myPF.ResamplingMethod = 'stratified'; %('multinomial', 'stratified', 'systematic
 % myPF.ResamplingPolicy.SamplingInterval = 1; % Applied only when
 % TriggerMethod = 'intreval'
 
-control = csvread('datasets/control1.csv');
-radar = csvread('datasets/radar1.csv');
+control = csvread('../datasets/control1.csv');
+radar = csvread('../datasets/radar1.csv');
 radar(:,2) = wrapToPi(radar(:,2));
 radar(:,4) = wrapToPi(radar(:,4));
 
