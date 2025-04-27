@@ -137,7 +137,7 @@ https://github.com/anna-kay/SLAM-Extended-Kalman-filter-Particle-filter/assets/5
 
 https://github.com/user-attachments/assets/d715cccd-348d-4022-a5b3-10a5930c4e04
 
-**Extended Kalman Filter: Corrected Vehicle Path & its Covariance**
+**Extended Kalman Filter: Corrected Vehicle Path and Its Covariance**
 
 https://github.com/user-attachments/assets/5520a267-5fc8-4171-be51-fb91498ae100
 
